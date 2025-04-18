@@ -41,6 +41,9 @@ public class cellPhone {
     public String getPhoneNumber() {
         return phoneNumber;
     }
+    public void dial(String dialNumber){
+        System.out.println(owner + "'s phone is calling " + dialNumber);
+    }
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;

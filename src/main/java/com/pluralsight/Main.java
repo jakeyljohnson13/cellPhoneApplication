@@ -28,11 +28,42 @@ public class Main {
         p1.setOwner(ownerInput);
         System.out.println();
 
-        System.out.println(p1.getSerialNumber());
-        System.out.println(p1.getModel());
-        System.out.println(p1.getCarrier());
-        System.out.println(p1.getPhoneNumber());
-        System.out.println(p1.getOwner());
+        cellPhone p2 = new cellPhone();
 
+        System.out.print("What is the serial number? ");
+        String serial2Input = s.nextLine();
+        p2.setSerialNumber(serial2Input);
+
+        System.out.print("What model is the phone? ");
+        String model2Input = s.nextLine();
+        p2.setModel(model2Input);
+
+        System.out.print("Who is the carrier? ");
+        String carrier2Input = s.nextLine();
+        p2.setCarrier(carrier2Input);
+
+        System.out.print("What is the phone number? ");
+        String phone2Input = s.nextLine();
+        p2.setPhoneNumber(phone2Input);
+
+        System.out.print("Who is the owner? ");
+        String owner2Input = s.nextLine();
+        p2.setOwner(owner2Input);
+        System.out.println();
+
+        p1.dial("855-555-2222");
+        display(p1);
+        display(p2);
+        p1.dial(p2.getPhoneNumber());
+        p2.dial(p1.getPhoneNumber());
+
+    }
+    public static void display(cellPhone p){
+        System.out.println(p.getSerialNumber());
+        System.out.println(p.getModel());
+        System.out.println(p.getCarrier());
+        System.out.println(p.getPhoneNumber());
+        System.out.println(p.getOwner());
+        System.out.println();
     }
 }
