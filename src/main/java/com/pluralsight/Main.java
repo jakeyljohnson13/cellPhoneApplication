@@ -57,6 +57,32 @@ public class Main {
         p1.dial(p2.getPhoneNumber());
         p2.dial(p1.getPhoneNumber());
 
+        cellPhone p3 = new cellPhone("0","iPhone"," "," "," ");
+        System.out.print("What is the serial number? ");
+        String serial3Input = s.nextLine();
+        p3.setSerialNumber(serial3Input);
+
+        System.out.print("What model is the phone? ");
+        String model3Input = s.nextLine();
+        p3.setModel(model3Input);
+
+        System.out.print("Who is the carrier? ");
+        String carrier3Input = s.nextLine();
+        p3.setCarrier(carrier3Input);
+
+        System.out.print("What is the phone number? ");
+        String phone3Input = s.nextLine();
+        p3.setPhoneNumber(phone3Input);
+
+        System.out.print("Who is the owner? ");
+        String owner3Input = s.nextLine();
+        p3.setOwner(owner3Input);
+        System.out.println();
+        display(p3);
+        p3.dial(p1.getPhoneNumber());
+        p1.dial(p3.getPhoneNumber());
+
+
     }
     public static void display(cellPhone p){
         System.out.println(p.getSerialNumber());

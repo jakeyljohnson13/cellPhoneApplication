@@ -6,7 +6,14 @@ public class cellPhone {
     private String carrier = "";
     private String phoneNumber = "";
     private String owner = "";
-    public void cellPhone(){
+    public cellPhone(){
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+    public cellPhone(String serialNumber,String model,String carrier,String phoneNumber,String owner){
         this.serialNumber = serialNumber;
         this.model = model;
         this.carrier = carrier;
